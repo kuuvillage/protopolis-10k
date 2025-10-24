@@ -15,6 +15,29 @@ Define the vision, motivation, and societal challenge your essay addresses.
 
 **Style Orientation:** Proposal-driven and practical rather than purely academic
 
+### Directory Structure
+
+```
+protopolis-10k/
+├── contents/        # 論文本体（章ごとのMarkdownファイル）
+│   ├── 01_introduction.md
+│   ├── 02_background.md
+│   ├── 03_concept.md
+│   ├── 04_implementation.md
+│   ├── 05_discussion.md
+│   └── 06_conclusion.md
+├── docs/           # 参考文献・収集した情報・調査資料
+│   ├── references.md
+│   ├── case_studies.md
+│   ├── abstract_draft.md
+│   └── kickoff_summary.md
+├── figs/           # 図表・画像ファイル
+│   ├── figure1_overview.png
+│   └── table1_comparison.png
+├── CLAUDE.md       # Claudeへの執筆ガイドライン
+└── README.md       # プロジェクト概要
+```
+
 ## 2. Essay Structure Guide
 
 ### Suggested Chapter Layout:
