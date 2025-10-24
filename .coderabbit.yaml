@@ -40,21 +40,9 @@ reviews:
 
   # Label suggestions for tracking essay progress
   suggested_labels: true
-  labeling_instructions:
-    - label: "needs-research"
-      description: "追加の調査・エビデンスが必要"
-    - label: "needs-clarity"
-      description: "表現や説明の改善が必要"
-    - label: "structure"
-      description: "章構成や論理展開の改善が必要"
-    - label: "terminology"
-      description: "用語の統一や定義の明確化が必要"
-    - label: "ready-for-review"
-      description: "レビュー準備完了"
-    - label: "major-revision"
-      description: "大幅な修正が必要"
-    - label: "minor-revision"
-      description: "軽微な修正が必要"
+  # Labeling instructions provide general guidelines for suggesting labels
+  # CodeRabbit will suggest appropriate labels based on the changes
+  labeling_instructions: []
   auto_apply_labels: true
 
   suggested_reviewers: true
