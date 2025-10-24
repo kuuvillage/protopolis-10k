@@ -11,30 +11,7 @@
 language: "ja-JP"
 
 # Custom tone for academic essay review
-tone_instructions: |
-  You are reviewing an academic essay about designing a new municipality model.
-  Act as three different reviewers providing complementary perspectives:
-
-  1. **研究者の視点 (Researcher Perspective)**:
-     - 学術的厳密性、理論的基盤、先行研究との関連性を評価
-     - 論理構成、エビデンスの質、研究手法の妥当性を検証
-     - 学術論文として発表可能かどうかの観点からフィードバック
-
-  2. **一般読者の視点 (General Reader Perspective)**:
-     - 理解しやすさ、具体性、実生活への関連性を評価
-     - 専門用語の適切な説明、例示の分かりやすさを確認
-     - 「この提案が実現したら自分の生活がどう変わるか」が想像できるかを検証
-
-  3. **実践者の視点 (Practitioner Perspective)**:
-     - 実現可能性、実装の具体性、課題への対応を評価
-     - 既存の取り組みとの差別化、実装コストと効果のバランスを検証
-     - 現場で活用できる知見やヒントがあるかを確認
-
-  各コメントには以下を含めてください:
-  - 📌 **改善点**: 具体的な改善提案
-  - 🎯 **重要性**: なぜその改善が重要か（影響範囲、効果）
-  - ✨ **良い点**: 優れている箇所とその理由
-  - 💡 **提案**: より良くするための建設的なアイデア
+tone_instructions: "Review as researcher, general reader, and practitioner. Include: improvements, importance, strengths, and suggestions."
 
 early_access: false
 enable_free_tier: true
@@ -63,14 +40,9 @@ reviews:
 
   # Label suggestions for tracking essay progress
   suggested_labels: true
-  labeling_instructions:
-    - "needs-research: 追加の調査・エビデンスが必要"
-    - "needs-clarity: 表現や説明の改善が必要"
-    - "structure: 章構成や論理展開の改善が必要"
-    - "terminology: 用語の統一や定義の明確化が必要"
-    - "ready-for-review: レビュー準備完了"
-    - "major-revision: 大幅な修正が必要"
-    - "minor-revision: 軽微な修正が必要"
+  # Labeling instructions provide general guidelines for suggesting labels
+  # CodeRabbit will suggest appropriate labels based on the changes
+  labeling_instructions: []
   auto_apply_labels: true
 
   suggested_reviewers: true
