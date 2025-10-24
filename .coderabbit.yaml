@@ -1,0 +1,282 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+# CodeRabbit Configuration for Essay Writing Project
+# Project: Designing a "New Municipality" under 10,000 residents
+
+# ============================================================================
+# GLOBAL SETTINGS
+# ============================================================================
+
+# Primary language: Japanese (essay is in Japanese with English abstract)
+language: "ja-JP"
+
+# Custom tone for academic essay review
+tone_instructions: |
+  You are reviewing an academic essay about designing a new municipality model.
+  Act as three different reviewers providing complementary perspectives:
+
+  1. **研究者の視点 (Researcher Perspective)**:
+     - 学術的厳密性、理論的基盤、先行研究との関連性を評価
+     - 論理構成、エビデンスの質、研究手法の妥当性を検証
+     - 学術論文として発表可能かどうかの観点からフィードバック
+
+  2. **一般読者の視点 (General Reader Perspective)**:
+     - 理解しやすさ、具体性、実生活への関連性を評価
+     - 専門用語の適切な説明、例示の分かりやすさを確認
+     - 「この提案が実現したら自分の生活がどう変わるか」が想像できるかを検証
+
+  3. **実践者の視点 (Practitioner Perspective)**:
+     - 実現可能性、実装の具体性、課題への対応を評価
+     - 既存の取り組みとの差別化、実装コストと効果のバランスを検証
+     - 現場で活用できる知見やヒントがあるかを確認
+
+  各コメントには以下を含めてください:
+  - 📌 **改善点**: 具体的な改善提案
+  - 🎯 **重要性**: なぜその改善が重要か（影響範囲、効果）
+  - ✨ **良い点**: 優れている箇所とその理由
+  - 💡 **提案**: より良くするための建設的なアイデア
+
+early_access: false
+enable_free_tier: true
+
+# ============================================================================
+# REVIEWS
+# ============================================================================
+
+reviews:
+  # Use assertive profile for more detailed academic feedback
+  profile: "assertive"
+
+  high_level_summary: true
+  high_level_summary_in_walkthrough: true
+  review_status: true
+  commit_status: true
+
+  # Enable detailed walkthrough features
+  collapse_walkthrough: false
+  changed_files_summary: true
+  sequence_diagrams: false  # Not relevant for essay writing
+  estimate_code_review_effort: true
+  assess_linked_issues: true
+  related_issues: true
+  related_prs: true
+
+  # Label suggestions for tracking essay progress
+  suggested_labels: true
+  labeling_instructions:
+    - "needs-research: 追加の調査・エビデンスが必要"
+    - "needs-clarity: 表現や説明の改善が必要"
+    - "structure: 章構成や論理展開の改善が必要"
+    - "terminology: 用語の統一や定義の明確化が必要"
+    - "ready-for-review: レビュー準備完了"
+    - "major-revision: 大幅な修正が必要"
+    - "minor-revision: 軽微な修正が必要"
+  auto_apply_labels: true
+
+  suggested_reviewers: true
+  poem: false  # Disable poems for professional academic context
+
+  # Path filters: Focus on essay content and documentation
+  path_filters:
+    - "contents/**/*.md"      # Main essay chapters
+    - "docs/**/*.md"          # References and research
+    - "README.md"             # Project overview
+    - "CLAUDE.md"             # Writing guidelines
+    - "!node_modules/**"
+    - "!.git/**"
+
+  # Path-specific instructions
+  path_instructions:
+    - path: "contents/*.md"
+      instructions: |
+        これは論文の本文です。以下の観点で厳密にレビューしてください:
+        - 論理展開の一貫性と説得力
+        - エビデンスの質と引用の適切性
+        - 用語の統一性（初出時に英語表記を括弧書き）
+        - 文体の統一（である調）
+        - 各章の目的が明確か、達成されているか
+
+    - path: "contents/01_introduction.md"
+      instructions: |
+        序論として以下を評価してください:
+        - 問題提起の明確性と重要性
+        - 研究目的・仮説の具体性
+        - 読者を引き込む導入になっているか
+
+    - path: "contents/02_background.md"
+      instructions: |
+        背景・先行研究として以下を評価してください:
+        - 既存システムの課題の網羅性
+        - 先行研究の整理と批判的検討
+        - 本研究の位置づけの明確さ
+
+    - path: "contents/03_concept.md"
+      instructions: |
+        コンセプト提案として以下を評価してください:
+        - ビジョンの具体性と独自性
+        - コミュニティ、ガバナンス、経済、技術の統合性
+        - 実現した姿の想像しやすさ
+
+    - path: "contents/04_implementation.md"
+      instructions: |
+        実装方針として以下を評価してください:
+        - 移行シナリオの現実性
+        - 実現要因とリスクの分析の深さ
+        - 具体的なアクションプランの提示
+
+    - path: "contents/05_discussion.md"
+      instructions: |
+        考察として以下を評価してください:
+        - 実現可能性の評価の妥当性
+        - 制約条件への対応の具体性
+        - 他地域への汎用性の検討
+
+    - path: "contents/06_conclusion.md"
+      instructions: |
+        結論として以下を評価してください:
+        - 全体の要約の適切性
+        - インパクトと意義の明確性
+        - 今後の展望の具体性
+
+    - path: "docs/*.md"
+      instructions: |
+        参考資料として以下を確認してください:
+        - 引用の正確性（APA 7th edition準拠）
+        - 情報源の信頼性
+        - 最新情報の反映
+
+  abort_on_close: true
+  disable_cache: false
+
+  # Auto review configuration
+  auto_review:
+    enabled: true
+    auto_incremental_review: true
+    ignore_title_keywords:
+      - "wip"
+      - "draft"
+      - "作業中"
+    drafts: false
+
+  # Finishing touches
+  finishing_touches:
+    docstrings:
+      enabled: false  # Not applicable for markdown essays
+    unit_tests:
+      enabled: false  # Not applicable for markdown essays
+
+  # Pre-merge checks for essay quality
+  pre_merge_checks:
+    title:
+      mode: "warning"
+      requirements: |
+        PRタイトルは以下の形式を推奨:
+        - [章番号] 変更内容の要約 (例: [Ch.3] コンセプトの具体化と事例追加)
+        - fix: 修正内容
+        - add: 追加内容
+
+    description:
+      mode: "warning"
+
+    issue_assessment:
+      mode: "warning"
+
+    # Custom checks for academic essay quality
+    custom_checks:
+      - name: "論理性チェック"
+        instructions: |
+          以下の論理性を検証してください:
+          - 主張と根拠の対応関係は明確か
+          - 因果関係の説明に飛躍はないか
+          - 反論への対応は十分か
+
+      - name: "エビデンスチェック"
+        instructions: |
+          以下のエビデンスを検証してください:
+          - 主張を裏付けるデータや引用は十分か
+          - 引用元の信頼性は確保されているか
+          - 最新の情報が反映されているか
+
+      - name: "読者視点チェック"
+        instructions: |
+          一般読者の視点で以下を検証してください:
+          - 専門用語は適切に説明されているか
+          - 抽象的な概念に具体例はあるか
+          - 実生活への影響が想像できるか
+
+      - name: "実現可能性チェック"
+        instructions: |
+          実践者の視点で以下を検証してください:
+          - 提案は実装可能な具体性があるか
+          - 想定されるコストと効果は妥当か
+          - リスクとその対策は検討されているか
+
+  # Tools configuration
+  tools:
+    # Markdown linting for consistency
+    markdownlint:
+      enabled: true
+
+    # Japanese grammar and style checking
+    languagetool:
+      enabled: true
+      level: "picky"  # Strict checking for academic writing
+      enabled_categories:
+        - "GRAMMAR"
+        - "STYLE"
+        - "REDUNDANCY"
+      disabled_categories:
+        - "TYPOS"  # May have false positives with Japanese technical terms
+      # Disable overly strict rules that may interfere with Japanese academic style
+      disabled_rules:
+        - "WHITESPACE_RULE"
+        - "EN_QUOTES"
+
+    # Disable code-specific tools
+    ast-grep:
+      essential_rules: false
+    shellcheck:
+      enabled: false
+    ruff:
+      enabled: false
+    biome:
+      enabled: false
+    eslint:
+      enabled: false
+    gitleaks:
+      enabled: false
+    semgrep:
+      enabled: false
+
+# ============================================================================
+# CHAT
+# ============================================================================
+
+chat:
+  art: false  # Professional academic context
+  auto_reply: true
+
+# ============================================================================
+# KNOWLEDGE BASE
+# ============================================================================
+
+knowledge_base:
+  opt_out: false
+
+  web_search:
+    enabled: true  # Enable for finding relevant research and references
+
+  code_guidelines:
+    enabled: true
+    filePatterns:
+      - "CLAUDE.md"  # Essay writing guidelines
+      - "README.md"  # Project overview
+
+  learnings:
+    scope: "local"  # Keep learnings repository-specific
+
+  issues:
+    scope: "local"
+
+  pull_requests:
+    scope: "local"
