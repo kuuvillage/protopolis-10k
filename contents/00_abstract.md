@@ -1,27 +1,19 @@
-# 抄録
+# アブストラクト
 
-## 日本語抄録
+## 日本語
 
-現代社会において、地方自治体は人口減少、財政難、行政サービスの非効率化といった多くの課題に直面している。特に小規模自治体では、限られた資源の中で持続可能な地域運営を実現することが喫緊の課題となっている。本論文では、人口1万人未満の「新しい自治体」モデルを提案し、小規模コミュニティにおける自律的で持続可能なガバナンスの在り方を探求する。
+本論文では、複数の小規模自治組織が集まることで暮らしに必要な機能を維持していく連合型自治モデルを提案する。具体的には、2000人程度の自治組織が5つ程度連合することで、合計10000人規模の自治体として機能することを想定している。多様な価値観を許容しながらも、機能を維持していくために、地理的に離れていることを許容した分散型の自治アーキテクチャ、ガバナンス体制、実行環境をつくることが一つの方法になる。同じヴィジョンと具体的なニーズを共有する複数の小規模自治組織が連合することで、各組織だけでは賄いきれないインフラ機能の維持と、新しい価値の創出が可能になる。
+連合型自治モデルを実現するにあたって、議会民主主義とは異なる意思決定プロセスと、新しい徴税と再分配のしくみの構築が必要になるが、本論文ではブロックチェーンを用いた「貢献量に応じた投票権」と「なめらかな徴税」を具体的な解決策として提示する。
+論文中では、国内外の具体的な取り組みを参照する。株式会社paramitaが国内で進めるLocal Coopは、市区町村機能の一部を地域住民が担うインフラ維持モデルを示す。Balaji Srinivasanが提唱するNetwork Statesは、地理的に分散したオンラインコミュニティが国家承認を得るというヴィジョンを提示する。筆者らが実践するkuu villageは、ブロックチェーンを用いたアクセスコントロールと経済活動を日常生活に実装する実践的知見を提供する。最後に、これら活動を参照しながら、連合型自治モデルの実現に必要な「要素1」と「要素2」について明らかにしていく。
 
-提案する新自治体モデルは、4つの柱から構成される。第一に、住民参加型のデジタルガバナンスにより、意思決定プロセスの透明性と効率性を向上させる。第二に、地域資源を活用した循環型経済システムを構築し、経済的自立性を高める。第三に、テクノロジーを活用したスマートインフラにより、少ない人口でも質の高い行政サービスを提供する。第四に、コミュニティの絆を重視した社会関係資本の醸成により、相互扶助の文化を育む。
-
-本研究では、既存の小規模自治体の事例分析を通じて、新自治体モデルの実現可能性を検証する。また、段階的な移行シナリオを提示し、既存の法制度や社会システムとの整合性を考慮した実装戦略を論じる。実証分析の結果、適切な制度設計とテクノロジー活用により、小規模自治体でも効率的かつ民主的なガバナンスが実現可能であることが示された。
-
-本論文の貢献は、人口規模に依存しない新しい自治体モデルの理論的枠組みを提供することにある。提案モデルは、地方創生や地域活性化の文脈において、実践的な指針となることが期待される。さらに、本研究は今後の地方自治制度改革における政策議論に資する知見を提供するものである。
-
-**キーワード**: 小規模自治体、デジタルガバナンス、循環型経済、コミュニティデザイン、地方創生
+**キーワード**: 連合型自治、分散型ガバナンス、ブロックチェーン、Network State、小規模コミュニティ
 
 ---
 
 ## English Abstract
 
-In contemporary society, local governments face numerous challenges including population decline, financial difficulties, and inefficiencies in administrative services. Particularly for small-scale municipalities, achieving sustainable regional management with limited resources has become an urgent issue. This paper proposes a "new municipality" model for communities under 10,000 residents and explores autonomous and sustainable governance in small-scale communities.
+This paper proposes a federated governance model in which approximately five autonomous communities of around 2,000 residents each form a coalition to maintain essential functions for a total population of approximately 10,000. To accommodate diverse values while sustaining vital community functions, we advocate for a distributed governance architecture, governance framework, and operational environment that permits geographic dispersion. By federating multiple small-scale autonomous organizations that share common visions and concrete needs, it becomes possible to maintain infrastructure functions beyond the capacity of individual organizations and to generate new value.
 
-The proposed new municipality model consists of four pillars. First, digital governance with citizen participation enhances transparency and efficiency in decision-making processes. Second, a circular economic system utilizing local resources increases economic independence. Third, smart infrastructure leveraging technology enables high-quality administrative services even with a small population. Fourth, fostering social capital that values community bonds cultivates a culture of mutual assistance.
+Realizing this federated governance model requires decision-making processes distinct from parliamentary democracy and new mechanisms for taxation and redistribution. This paper presents blockchain-based "smooth taxation" and "contribution-weighted voting rights" as concrete solutions. We examine several practical initiatives: Local Coop, developed by Paramita Inc. in Japan, demonstrates how local residents can assume functions traditionally provided by municipalities; Network States, proposed by Balaji Srinivasan, presents a vision of geographically distributed communities seeking national recognition through online platforms; and kuu village, our own experimental community, offers insights from small-scale practice. Finally, drawing on these cases, we elucidate the blockchain-based technological infrastructure and diverse governance model designs necessary for implementing the proposed federated governance model.
 
-This study examines the feasibility of the new municipality model through case analyses of existing small-scale municipalities. It also presents phased transition scenarios and discusses implementation strategies that consider consistency with existing legal systems and social structures. The empirical analysis demonstrates that efficient and democratic governance is achievable in small-scale municipalities through appropriate institutional design and technology utilization.
-
-The contribution of this paper lies in providing a theoretical framework for a new municipality model independent of population size. The proposed model is expected to serve as practical guidance in the context of regional revitalization and community development. Furthermore, this research offers insights that contribute to policy discussions on future local government reform.
-
-**Keywords**: Small-scale Municipality, Digital Governance, Circular Economy, Community Design, Regional Revitalization
+**Keywords**: federated governance, distributed governance, blockchain, Network State, small-scale communities
