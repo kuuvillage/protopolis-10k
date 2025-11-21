@@ -27,10 +27,9 @@ protopolis-10k/
 │   ├── 05_discussion.md
 │   └── 06_conclusion.md
 ├── docs/           # 参考文献・収集した情報・調査資料
-│   ├── references.md
-│   ├── case_studies.md
-│   ├── abstract_draft.md
-│   └── kickoff_summary.md
+│   ├── basic_research #日本国内の現状についてのリサーチ
+│   ├── external_env_research #外部環境の現状についてのリサーチ
+│   └── paper_structure.md #論文アウトライン
 ├── figs/           # 図表・画像ファイル
 │   ├── figure1_overview.png
 │   └── table1_comparison.png
